@@ -1,0 +1,13 @@
+{
+  "name": "brainy_basket",
+  "version": "1.0.0",
+  "description": "Brainy Basket smart grocery and kitchen management prototype.",
+  "scripts": {
+    "start": "python run.py",
+    "dev": "python -m uvicorn backend.main:app --port 8082 --reload",
+    "serve": "npx -y serve . -p 8082"
+  },
+  "keywords": ["smart-kitchen", "iot", "grocery-monitoring", "hackathon"],
+  "author": "SIH Team",
+  "license": "MIT"
+}

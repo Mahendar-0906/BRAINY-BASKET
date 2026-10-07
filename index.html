@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Brainy Basket — Smart Pantry & IoT Monitoring</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div id="app">
+
+    <!-- Sidebar -->
+    <aside id="sidebar">
+      <div class="brand">
+        <div class="brand-logo">
+          <span class="brand-emoji">🧺</span>
+        </div>
+        <div class="brand-text">
+          <div class="brand-name">Brainy Basket</div>
+          <div class="brand-tagline">Smart Pantry · IoT · AI</div>
+        </div>
+      </div>
+
+      <div class="nav-section-label">MAIN MENU</div>
+      <nav id="nav"></nav>
+
+      <div class="sidebar-bottom">
+        <div class="iot-pill" id="sidebar-iot-pill">
+          <span class="iot-dot"></span>
+          <span class="iot-label">IoT Connected</span>
+        </div>
+        <div class="sidebar-version">v3.0 · Manual Registration</div>
+      </div>
+    </aside>
+
+    <!-- Main wrapper -->
+    <div id="main-wrapper">
+
+      <!-- Top header bar -->
+      <header id="topbar">
+        <div class="topbar-left">
+          <button id="sidebar-toggle" onclick="toggleSidebar()">
+            <span></span><span></span><span></span>
+          </button>
+          <div id="topbar-breadcrumb">Dashboard</div>
+        </div>
+        <div class="topbar-right">
+          <div class="topbar-search">
+            <span class="search-icon">🔍</span>
+            <input type="text" placeholder="Search commodities…" id="global-search" oninput="handleGlobalSearch(this.value)">
+          </div>
+          <div class="topbar-badge" id="topbar-alerts" onclick="view='pantry';render()">
+            <span id="alert-count-badge">0</span>
+            <span>⚠️</span>
+          </div>
+          <div class="topbar-avatar">BB</div>
+        </div>
+      </header>
+
+      <!-- Page content -->
+      <main id="view"></main>
+
+    </div>
+  </div>
+
+  <!-- Modal root -->
+  <div id="modal-root"></div>
+
+  <!-- Toast notifications -->
+  <div id="toast-container"></div>
+
+  <script src="app.js"></script>
+</body>
+</html>
